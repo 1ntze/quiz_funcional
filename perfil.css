@@ -1,0 +1,719 @@
+:root{
+    --primary: #007bff;       /* azul principal */
+    --primary-dark: #0056b3;  /* azul escuro */
+    --bg: #f0f4ff;            /* fundo da página */
+    --card: #122477;           /* cor do card */
+    --text: #01296e;          /* cor do texto */
+    --subtext: #131c5e;           /* cor de subtítulo */
+    --border: #ddd;            /* cor das bordas */
+}
+
+/* LIGHT MODE - botão outline */
+body:not(.dark-mode) .btn-glass-outline {
+    background: var(--btn-outline-bg);
+    color: var(--btn-outline-text);
+    border: 1px solid var(--btn-outline-border);
+}
+
+/* LIGHT MODE - botões outline da missão */
+body:not(.dark-mode) .btn-glass-outline {
+    background: rgba(1, 12, 36, 0.2);  /* fundo leve azul */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #1c2a72;      /* borda azul clara */
+    transition: all 0.3s ease;
+}
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(28,42,114,0.3); /* só um leve escurecimento */
+}
+
+/* NAVBAR - LIGHT MODE (força texto escuro) */
+body:not(.dark-mode) .navbar .nav-link {
+    color: #0a1b6e !important; /* azul escuro */
+}
+
+body:not(.dark-mode) .navbar .navbar-brand {
+    color: #0a1b6e !important;
+}
+
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98);
+}
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: var(--btn-outline-hover);
+}
+
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98);
+}
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* LIGHT MODE - fundo azul clarinho */
+body:not(.dark-mode) {
+    background: #e0f0ff; /* azul clarinho */
+    color: #1a1a1a;      /* texto escuro */
+}
+
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* LIGHT MODE - botões azul escuro */
+body:not(.dark-mode) .btn-glass {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #02092d; /* borda azul clara */
+}
+
+body:not(.dark-mode) .btn-glass-outline {
+    background: rgba(10,26,63,0.2); /* leve transparência sobre o fundo azul clarinho */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #1c2a72;      /* borda azul clara */
+}
+
+body:not(.dark-mode) .titulo-como-funciona {
+    color: #0a1b6e;
+}
+
+body:not(.dark-mode) .titulo-atv {
+    color: #0a1b6e;
+}
+/* LIGHT MODE - apenas este b específico */
+body:not(.dark-mode) .top-jogadores {
+    color: #0a1b6e;
+}
+/* Hover  */
+body:not(.dark-mode) .btn-glass:hover {
+    background: #021053; /* azul mais claro/moderado */
+}
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(28,42,114,0.3); /* só um leve escurecimento */
+}
+
+/* Clique simples */
+body:not(.dark-mode) .btn-glass:active,
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98); /* efeito de clique */
+}
+ /* LIGHT MODE - fundo da página azul clarinho */
+body:not(.dark-mode) {
+    background: #e0f0ff;  /* azul clarinho */
+    color: #1a1a1a;       
+}
+
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card {
+    background: #0a1a3f;        /* azul escuro */
+    color: #ffffff;             /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* Rank imagens */
+body:not(.dark-mode) .rank-img {
+    border: 4px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Rank texto */
+body:not(.dark-mode) .rank-card h4,
+body:not(.dark-mode) .rank-card p {
+    color: #ffffff;
+}
+
+/* FOOTER permanece escuro mesmo no light mode */
+.footer-insane {
+    background-color: #0b0f2f !important;
+    color: #ffffff !important;
+    border-top: 2px solid #1c2a72 !important;
+    
+}
+/* COPYRIGHT branco no footer */
+.footer-insane .copy {
+    color: #ffffff !important;
+    opacity: 0.8; /* opcional: leve transparência */
+}
+
+/* LIGHT MODE - borda no background do container */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card,
+body:not(.dark-mode) .hero {
+    border: 1px solid #1c2a72; /* borda azul escura */
+    padding: 15px;             /* espaço interno opcional */
+    background-clip: padding-box; /* garante que a borda não sobreponha o fundo */
+}
+
+/* DARK MODE - borda apenas em cima e embaixo */
+body.dark-mode 
+body.dark-mode 
+body.dark-mode .hero {
+    border-top: 1px solid #3a5ed4;    /* borda superior dourada */
+    border-bottom: 1px solid #3a5ed4; /* borda inferior dourada */
+    border-left: none;                 /* sem borda lateral */
+    border-right: none;                /* sem borda lateral */
+
+    padding: 15px;                     /* mantém espaçamento */
+}
+
+body.dark-mode .hero {
+    position: relative;
+    padding: 15px;
+    border: none;
+}
+
+/* linha de cima */
+body.dark-mode .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* linha de baixo */
+body.dark-mode .hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+/* BASE */
+body{
+font-family:'Poppins', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition: background 0.3s, color 0.3s;
+}
+
+/* TRANSIÇÕES */
+.card-custom, .navbar, .btn{
+transition: all 0.3s ease;
+}
+
+.dark-mode{
+--bg:#0b0f2f;
+--text:#ffffff;
+--card:#ffffff;
+--border:#1c2a72;
+--subtext:#cbd5ff;
+}
+
+/* LIGHT MODE - botões outline azul escuro */
+body:not(.dark-mode) .btn-glass-outline {
+    background: #06124d; /* fundo azul escuro semi-transparente */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #06124d;      /* borda azul clara */
+
+}
+
+/* Hover simples */
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(10,26,63,1); /* azul escuro sólido no hover */
+    color: #ffffff;
+}
+
+/* Clique */
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98); /* leve efeito de clique */
+}
+
+/* NAVBAR */
+.navbar{
+background: rgba(255,255,255,0.8) !important;
+backdrop-filter: blur(12px);
+
+}
+
+.navbar.scrolled{
+background:#ffffff !important;
+box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* NAVBAR DARK */
+.dark-mode .navbar{
+background: rgba(11,15,47,0.8) !important;
+border-bottom: 1px solid #1c2a72;
+}
+
+/* LINKS */
+.navbar .nav-link{
+position:relative;
+color:var(--text);
+}
+
+.navbar .nav-link:hover{
+color:var(--primary);
+}
+
+.navbar .nav-link::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:-5px;
+width:0%;
+height:2px;
+background:var(--primary);
+transition:0.3s;
+transform:translateX(-50%);
+}
+
+.navbar .nav-link:hover::after{
+width:100%;
+}
+
+
+
+/* DARK HOVER */
+.dark-mode .card-custom:hover{
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+
+
+/* HOVER (efeito vidro mais forte) */
+.btn-glass:hover,
+.btn-glass-outline:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 124, 255, 0.25); /* azul suave */
+    border-color: rgba(46, 124, 255, 0.7);
+    box-shadow: 
+        0 8px 25px rgba(46, 124, 255, 0.3),
+        0 0 10px rgba(46, 124, 255, 0.4);
+
+}
+
+/* CLIQUE */
+.btn-glass:active,
+.btn-glass-outline:active {
+    transform: scale(0.96);
+}
+
+/* SOMBRA SUAVE */
+.btn-glass:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* DARK MODE (fica ainda mais bonito) */
+.dark-mode .btn-glass {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .btn-glass-outline {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/* FOOTER BASE */
+.footer-insane {
+    background-color: var(--bg);
+    color: var(--text);
+    border-top: 2px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* GRID HACKER ANIMADO */
+.grid-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(46,124,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46,124,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 15s linear infinite;
+}
+@keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(40px,40px); }
+}
+
+/* PARTÍCULAS LEVES */
+.particles::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(var(--primary) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.08;
+    animation: particlesMove 20s linear infinite;
+}
+@keyframes particlesMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(-200px, -200px); }
+}
+
+/* LINHA NEON ANIMADA */
+.neon-line {
+    position: absolute;
+    top: 0;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    animation: neonMove 4s linear infinite;
+}
+@keyframes neonMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* TITULO COM GRADIENTE */
+.footer-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* TEXTO */
+.footer-text {
+    color: var(--text);
+    opacity: 0.7;
+}
+
+/* ICONES SOCIAIS */
+.social-icons i {
+    font-size: 1.6rem;
+    margin: 0 12px;
+    color: var(--primary-dark);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    color: var(--primary);
+    text-shadow: 
+        0 0 10px var(--primary),
+        0 0 20px var(--primary),
+        0 0 40px var(--primary-dark);
+    transform: scale(1.2) translateY(-5px);
+}
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.5); opacity:0.6; }
+    100% { transform: scale(1); opacity:1; }
+}
+
+/* COPY */
+.copy {
+    color: var(--subtext);
+}
+
+/* HR */
+.footer-insane hr {
+    border-color: var(--border);
+    margin: 1rem 0;
+}
+
+/* LOGO COM EFEITO NEON */
+.footer-logo {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo .logo-img {
+    width: 120px; /* ajuste conforme precisar */
+    height: auto;
+    filter: drop-shadow(0 0 8px var(--primary)) 
+            drop-shadow(0 0 15px var(--primary-dark));
+    transition: 0.3s;
+}
+
+.footer-logo .logo-img:hover {
+    filter: drop-shadow(0 0 15px var(--primary)) 
+            drop-shadow(0 0 25px var(--primary-dark)) 
+            drop-shadow(0 0 35px var(--primary));
+    transform: scale(1.1) rotate(-2deg);
+}
+:root {
+    /* Light mode */
+    --btn-text: #ffffff; /* texto do botão claro */
+}
+
+.dark-mode {
+    --btn-text: #ffffff; /* texto do botão também claro */
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #1c2a72, #3a4edb);
+    color: var(--btn-text); /* garante texto claro */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, #3a4edb, #1c2a72);
+    color: var(--btn-text); /* mantém o texto branco */
+}
+
+.btn-custom:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: var(--btn-text);
+}
+
+
+.logo-energia {
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* brilho bem leve (glass) */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* hover opcional bem clean */
+.logo-energia:hover {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+    transform: scale(1.03);
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 3px solid #3a4edb;
+    box-shadow: 0 0 20px rgba(58, 78, 219, 0.6);
+}
+
+.edit-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 5px 8px;
+}
+
+.status-box {
+    min-width: 120px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+:root{
+    --primary: #3a4edb;
+    --bg-dark: #0f172a;
+    --card: rgba(255,255,255,0.08);
+    --text: #ffffff;
+}
+
+/* BODY */
+body.dark-mode{
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    transition: 0.3s;
+}
+
+.navbar.scrolled{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.7) !important;
+}
+
+/* GLASS CARD */
+.glass-card{
+    background: var(--card);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* FOTO PERFIL */
+.profile-img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 25px rgba(58, 78, 219, 0.7);
+    transition: 0.3s;
+}
+
+.profile-img:hover{
+    transform: scale(1.05);
+}
+
+/* BOTÃO EDITAR */
+.edit-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+/* STATUS BOX */
+.status-box{
+    min-width: 130px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.status-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(58,78,219,0.5);
+}
+
+/* BOTÃO CUSTOM */
+.btn-custom{
+    background: linear-gradient(135deg, #1c2a72, #3a4edb);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 8px 20px;
+}
+
+.btn-custom:hover{
+    opacity: 0.9;
+}
+
+/* FOOTER INSANO */
+.footer-insane{
+    background: #020617;
+    color: white;
+    position: relative;
+}
+
+/* GRID BACKGROUND */
+.grid-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+}
+
+/* LINHA NEON */
+.neon-line{
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3a4edb, transparent);
+    animation: neon 3s linear infinite;
+}
+
+@keyframes neon{
+    0%{opacity: 0.2;}
+    50%{opacity: 1;}
+    100%{opacity: 0.2;}
+}
+
+/* SOCIAL ICONS */
+.social-icons i{
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons i:hover{
+    color: #3a4edb;
+    transform: scale(1.2);
+}
+
+.profile-img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3a4edb;
+    box-shadow: 0 0 25px rgba(58,78,219,0.7);
+}
+
+.edit-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+.status-box{
+    min-width: 130px;
+    padding: 15px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+.status-box::after{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 200%;
+    height: 300%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,0,0,0.05),
+        transparent
+    );
+
+    transform: rotate(25deg);
+    transition: 0.6s;
+}
+
+.status-box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3a4edb, #007bff);
+}

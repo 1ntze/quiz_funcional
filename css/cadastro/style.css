@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background-size:cover;
+background-position:center;
+padding:20px;
+}
+
+/* VIDEO DE FUNDO */
+
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(5,7,102,0.6)
+);
+z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+max-width:1000px;
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+display:flex;
+flex-wrap:wrap;
+box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* FORMULÁRIO */
+
+.form-container{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+form{
+width:100%;
+max-width:320px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
+}
+
+.subtitle{
+font-size:13px;
+color:#2d959c;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+/* INPUTS */
+
+.formulario input{
+width:100%;
+padding:14px 20px;
+border:none;
+border-radius:20px;
+margin:8px 0;
+font-family:'Poppins', sans-serif;
+background-color:rgba(19,119,126,0.15);
+color:#0f5c61;
+transition:0.3s;
+box-shadow:
+0 2px 5px rgba(0,0,0,0.25),
+0 2px 5px rgba(0,0,0,0.22);
+}
+
+.formulario input::placeholder{
+color:rgba(15,92,97,0.7);
+}
+
+.formulario input:focus{
+outline:none;
+background-color:rgba(19,119,126,0.45);
+box-shadow:
+0 0 0 2px rgba(19,119,126,0.4),
+0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+
+.cta{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+max-width:220px;
+padding:12px 30px;
+border:none;
+background:#0a59a3fa;
+color:white;
+font-family:'Poppins', sans-serif;
+font-size:14px;
+font-weight:bold;
+letter-spacing:1px;
+text-transform:uppercase;
+cursor:pointer;
+transition:0.5s;
+box-shadow:6px 6px 0 rgba(27,113,163,0.541);
+transform:skewX(-15deg);
+height:55px;
+}
+
+.cta span{
+transform:skewX(15deg);
+}
+
+.cta span:nth-child(2){
+width:20px;
+margin-left:20px;
+position:relative;
+top:2px;
+transition:0.5s;
+}
+
+.cta:hover{
+box-shadow:10px 10px 0 #FBC638;
+}
+
+.cta:hover span:nth-child(2){
+margin-left:15px;
+}
+
+/* SVG ANIMAÇÃO */
+
+path.one{
+transition:0.4s;
+transform:translateX(-60%);
+}
+
+path.two{
+transition:0.5s;
+transform:translateX(-30%);
+}
+
+path.three{
+transition:0.5s;
+}
+
+.cta:hover path.one{
+transform:translateX(0%);
+animation:color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two{
+transform:translateX(0%);
+animation:color_anim 1s infinite 0.4s;
+}
+
+.cta:hover path.three{
+animation:color_anim 1s infinite 0.2s;
+}
+
+@keyframes color_anim{
+0%{fill:white;}
+50%{fill:#FBC638;}
+100%{fill:white;}
+}
+
+/* LINKS */
+
+a{
+font-size:12px;
+color:#7d3ec5;
+text-decoration:none;
+}
+
+/* VIDEO LATERAL */
+
+.video-container{
+width:50%;
+position:relative;
+overflow:hidden;
+}
+
+.video-lateral{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* LOGIN LINK */
+
+.link-login{
+color:#13777e;
+text-decoration:none;
+font-size:13px;
+margin-top:15px;
+text-align:center;
+display:block;
+transition:0.3s;
+}
+
+.link-login b{
+font-weight:600;
+}
+
+.link-login:hover{
+color:#0d5459;
+transform:scale(1.03);
+}
+
+/* LOGO */
+
+.logo{
+width:40px;
+max-width:100%;
+height:auto;
+margin-bottom:10px;
+transition:0.3s;
+}
+
+.logo:hover{
+transform:scale(1.1);
+}
+
+/* Senha */
+
+.senha-container{
+position:relative;
+}
+
+.mostrarSenha{
+position:absolute;
+top:22px;
+right:12px;
+cursor:pointer;
+}
+
+.mostrarSenha i{
+font-size:14px;
+color:#333;
+}
+
+/* ERRO */
+
+small{
+font-size:11px;
+color:red;
+display:block;
+margin-top:2px;
+text-align:center;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+.form-container{
+width:100%;
+padding:35px 25px;
+}
+
+.video-container{
+display:none;
+}
+
+}
+
+@media (max-width:480px){
+
+.subtitle{
+font-size:12px;
+}
+
+.cta{
+max-width:180px;
+height:50px;
+font-size:12px;
+}
+
+.logo{
+width:35px;
+}
+
+}

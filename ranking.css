@@ -1,0 +1,1088 @@
+:root{
+    --primary: #007bff;       /* azul principal */
+    --primary-dark: #0056b3;  /* azul escuro */
+    --bg: #f0f4ff;            /* fundo da página */
+    --card: #122477;           /* cor do card */
+    --text: #01296e;          /* cor do texto */
+    --subtext: #131c5e;           /* cor de subtítulo */
+    --border: #ddd;            /* cor das bordas */
+}
+
+/* LIGHT MODE - botão outline */
+body:not(.dark-mode) .btn-glass-outline {
+    background: var(--btn-outline-bg);
+    color: var(--btn-outline-text);
+    border: 1px solid var(--btn-outline-border);
+}
+
+/* LIGHT MODE - botões outline da missão */
+body:not(.dark-mode) .btn-glass-outline {
+    background: rgba(1, 12, 36, 0.2);  /* fundo leve azul */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #1c2a72;      /* borda azul clara */
+    transition: all 0.3s ease;
+}
+
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(28,42,114,0.3); /* só um leve escurecimento */
+}
+
+
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98);
+}
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: var(--btn-outline-hover);
+}
+
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98);
+}
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* LIGHT MODE - fundo azul clarinho */
+body:not(.dark-mode) {
+    background: #e0f0ff; /* azul clarinho */
+    color: #1a1a1a;      /* texto escuro */
+}
+
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* Rank images */
+body:not(.dark-mode) .rank-img {
+    border: 4px solid rgba(255,255,255,0.35);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Rank text */
+body:not(.dark-mode) .rank-card h4,
+body:not(.dark-mode) .rank-card p {
+    color: #ffffff;
+}
+/* LIGHT MODE - botões azul escuro */
+body:not(.dark-mode) .btn-glass {
+    background: #0a1a3f;       /* azul escuro */
+    color: #ffffff;            /* texto branco */
+    border: 1px solid #02092d; /* borda azul clara */
+}
+
+body:not(.dark-mode) .btn-glass-outline {
+    background: rgba(10,26,63,0.2); /* leve transparência sobre o fundo azul clarinho */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #1c2a72;      /* borda azul clara */
+}
+
+body:not(.dark-mode) .titulo-como-funciona {
+    color: #0a1b6e;
+}
+
+body:not(.dark-mode) .titulo-atv {
+    color: #0a1b6e;
+}
+/* LIGHT MODE - apenas este b específico */
+body:not(.dark-mode) .top-jogadores {
+    color: #0a1b6e;
+}
+/* Hover  */
+body:not(.dark-mode) .btn-glass:hover {
+    background: #021053; /* azul mais claro/moderado */
+}
+
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(28,42,114,0.3); /* só um leve escurecimento */
+}
+
+/* Clique simples */
+body:not(.dark-mode) .btn-glass:active,
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98); /* efeito de clique */
+}
+ /* LIGHT MODE - fundo da página azul clarinho */
+body:not(.dark-mode) {
+    background: #e0f0ff;  /* azul clarinho */
+    color: #1a1a1a;       
+}
+
+/* LIGHT MODE - cards azul escuro */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card {
+    background: #0a1a3f;        /* azul escuro */
+    color: #ffffff;             /* texto branco */
+    border: 1px solid #1c2a72; /* borda azul clara */
+}
+
+/* Rank imagens */
+body:not(.dark-mode) .rank-img {
+    border: 4px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Rank texto */
+body:not(.dark-mode) .rank-card h4,
+body:not(.dark-mode) .rank-card p {
+    color: #ffffff;
+}
+
+/* FOOTER permanece escuro mesmo no light mode */
+.footer-insane {
+    background-color: #0b0f2f !important;
+    color: #ffffff !important;
+    border-top: 2px solid #1c2a72 !important;
+    
+}
+/* COPYRIGHT branco no footer */
+.footer-insane .copy {
+    color: #ffffff !important;
+    opacity: 0.8; /* opcional: leve transparência */
+}
+
+/* LIGHT MODE - borda no background do container */
+body:not(.dark-mode) .card-custom,
+body:not(.dark-mode) .podium .rank-card,
+body:not(.dark-mode) .hero {
+    border: 1px solid #1c2a72; /* borda azul escura */
+    padding: 15px;             /* espaço interno opcional */
+    background-clip: padding-box; /* garante que a borda não sobreponha o fundo */
+}
+
+/* DARK MODE - borda apenas em cima e embaixo */
+body.dark-mode 
+body.dark-mode 
+body.dark-mode .hero {
+    border-top: 1px solid #3a5ed4;    /* borda superior dourada */
+    border-bottom: 1px solid #3a5ed4; /* borda inferior dourada */
+    border-left: none;                 /* sem borda lateral */
+    border-right: none;                /* sem borda lateral */
+    padding: 15px;                     /* mantém espaçamento */
+}
+
+body.dark-mode .hero {
+    position: relative;
+    padding: 15px;
+    border: none;
+}
+
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 2498px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* camada do vídeo */
+.hero-media {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* vídeo de fundo */
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+/* linha de cima (dark mode) */
+body.dark-mode .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+.hero {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    background: linear-gradient(#0b0f1a, #0b0f1a) padding-box,
+                linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00) border-box;
+
+    box-shadow: 
+        0 0 10px #3a4edb,
+        0 0 25px rgba(58, 78, 219, 0.6);
+}
+
+/* BASE */
+body{
+font-family:'Poppins', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition: background 0.3s, color 0.3s;
+}
+
+/* TRANSIÇÕES */
+.card-custom, .navbar, .btn{
+transition: all 0.3s ease;
+}
+
+.dark-mode{
+--bg:#0b0f2f;
+--text:#ffffff;
+--card:#ffffff;
+--border:#1c2a72;
+--subtext:#cbd5ff;
+}
+
+/* LIGHT MODE - botões outline azul escuro */
+body:not(.dark-mode) .btn-glass-outline {
+    background: #06124d; /* fundo azul escuro semi-transparente */
+    color: #ffffff;                  /* texto branco */
+    border: 1px solid #06124d;      /* borda azul clara */
+
+}
+
+/* Hover simples */
+body:not(.dark-mode) .btn-glass-outline:hover {
+    background: rgba(10,26,63,1); /* azul escuro sólido no hover */
+    color: #ffffff;
+}
+
+/* Clique */
+body:not(.dark-mode) .btn-glass-outline:active {
+    transform: scale(0.98); /* leve efeito de clique */
+}
+
+/* NAVBAR */
+.navbar{
+background: rgba(255,255,255,0.8) !important;
+backdrop-filter: blur(12px);
+
+}
+
+.navbar.scrolled{
+background:#ffffff !important;
+box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* NAVBAR DARK */
+.dark-mode .navbar{
+background: rgba(11,15,47,0.8) !important;
+border-bottom: 1px solid #1c2a72;
+}
+
+/* LINKS */
+.navbar .nav-link{
+position:relative;
+color:var(--text);
+}
+
+.navbar .nav-link:hover{
+color:var(--primary);
+}
+
+.navbar .nav-link::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:-5px;
+width:0%;
+height:2px;
+background:var(--primary);
+transition:0.3s;
+transform:translateX(-50%);
+}
+
+.navbar .nav-link:hover::after{
+width:100%;
+}
+
+
+/* DARK HOVER */
+.dark-mode .card-custom:hover{
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+
+
+/* BOTÃO */
+#themeBtn{
+position:relative;
+overflow:hidden;
+border-radius:12px;
+transition: all 0.3s ease;
+}
+
+/* GLOW */
+#themeBtn:hover{
+box-shadow:0 0 12px rgba(46,124,255,0.6);
+transform:translateY(-2px);
+}
+
+/* ATIVO */
+#themeBtn.active{
+background:#2e7cff;
+color:#fff;
+box-shadow:0 0 15px rgba(46,124,255,0.8);
+}
+
+/* ÍCONE */
+#themeBtn i{
+transition: all 0.4s ease;
+}
+
+/* ANIMAÇÃO */
+#themeBtn:hover i{
+transform:rotate(20deg) scale(1.2);
+}
+
+/* RIPPLE */
+.ripple{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.6);
+transform:scale(0);
+animation:ripple-effect 0.6s linear;
+pointer-events:none;
+}
+
+@keyframes ripple-effect{
+to{
+transform:scale(4);
+opacity:0;
+}
+}
+
+/*botão - começar*/
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-glass-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+
+    padding: 10px 22px;
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER (efeito vidro mais forte) */
+.btn-glass:hover,
+.btn-glass-outline:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 124, 255, 0.25); /* azul suave */
+    border-color: rgba(46, 124, 255, 0.7);
+    box-shadow: 
+        0 8px 25px rgba(46, 124, 255, 0.3),
+        0 0 10px rgba(46, 124, 255, 0.4);
+
+}
+
+/* CLIQUE */
+.btn-glass:active,
+.btn-glass-outline:active {
+    transform: scale(0.96);
+}
+
+/* SOMBRA SUAVE */
+.btn-glass:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* DARK MODE (fica ainda mais bonito) */
+.dark-mode .btn-glass {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .btn-glass-outline {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* LINHA DO LADO DO ÍCONE*/
+.linha {
+    height: 1px;
+    width: 80px;
+    background-color: #ccc;
+    background: linear-gradient(to right, transparent, #999, transparent);
+    
+}
+
+section .d-flex img {
+    width: 100px;       /* diminui o tamanho da imagem */
+    margin-top: -20px;  /* sobe a imagem 20px */
+}
+
+/* Efeito azul minimalista */
+.hacker-text {
+    font-size: 14px;                     /* tamanho do texto */
+    font-family: 'Poppins', sans-serif;
+    color: #00bfff;                      /* azul neon */
+    letter-spacing: 1px;
+    border-right: 2px solid #00bfff;     /* cursor discreto */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;                             /* inicia sem largura */
+    animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 52%; }
+}
+
+/* Cursor piscando */
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;      /* tamanho do título */
+    font-weight: bold;    /* bold */
+    color: #ffffff;       /* azul clean */
+    letter-spacing: 1px;  /* espaçamento minimalista */
+}
+
+
+
+
+
+/* PODIUM */
+.ranking {
+    color: white;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+/* Cartões do podium */
+.podium .rank-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover efeito leve */
+.podium .rank-card:hover {
+    transform: translateY(-20px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(255,255,255,0.25);
+}
+
+.podium .first {
+    transform: scale(1.15);
+    z-index: 2;
+}
+/* Alturas do podium */
+.podium .first { height: 400px; width: 200px; }
+.podium .second { height: 280px; width: 180px; }
+.podium .third { height: 260px; width: 170px; }
+
+/* Medalhas */
+.rank-badge {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+
+.rank-badge.gold { background: linear-gradient(135deg, #FFD700, #FFB700); }
+.rank-badge.silver { background: linear-gradient(135deg, #C0C0C0, #AAAAAA); }
+.rank-badge.bronze { background: linear-gradient(135deg, #CD7F32, #B56B28); }
+
+/* Imagem do jogador com efeitos */
+.rank-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 4px solid rgba(255,255,255,0.35);
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+/* Efeito especial para o 1º lugar */
+.first-img {
+    border: 5px solid #FFD700;
+    box-shadow: 0 0 25px #FFD700;
+    animation: bounce 2s infinite;
+}
+.podium .rank-card {
+    overflow: visible;
+}
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Nome e XP */
+.rank-card h4 { margin-top: 15px; margin-bottom: 5px; font-weight: 700; font-size: 1.3rem; }
+.rank-card p { margin: 0; font-size: 1rem; color: rgba(255,255,255,0.8); }
+
+
+/* Sparkles para o 1º lugar */
+/* Container dos sparkles */
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Partículas individuais */
+.sparkles::before,
+.sparkles::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle, rgba(208, 205, 0, 0.8) 2px, transparent 2px);
+    background-size: 50px 50px;
+    animation: floatSparkles 6s linear infinite;
+    opacity: 0.2;
+}
+
+/* Camada 2 com variação */
+.sparkles::after {
+    animation-duration: 10s;
+    opacity: 0.1;
+}
+
+/* Animação subindo */
+@keyframes floatSparkles {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+    }
+}
+
+/* Base do podium tipo pedestal */
+.podium .first::after,
+.podium .second::after,
+.podium .third::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    height: 25px;
+    border-radius: 12px 12px 0 0;
+}
+
+.podium .first::after { background: #FFD700; }
+.podium .second::after { background: #a1a1a0; }
+.podium .third::after { background: #CD7F32; }
+
+.logo-gold {
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* contorno seguindo o PNG */
+    filter: drop-shadow(0 0 2px #d4a03a)
+            drop-shadow(0 0 6px rgba(212, 160, 58, 0.6));
+}
+
+.logo-gold:hover {
+    transform: scale(1.05);
+
+    /* leve destaque no hover */
+    filter: drop-shadow(0 0 4px #d4a03a)
+            drop-shadow(0 0 8px rgba(213, 172, 90, 0.7));
+}
+
+/* 2º lugar - prata */
+.second .rank-img {
+    border: 4px solid #C0C0C0;
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.7);
+}
+
+/* 3º lugar - bronze */
+.third .rank-img {
+    border: 4px solid #CD7F32;
+    box-shadow: 0 0 20px rgba(205, 127, 50, 0.7);
+}
+
+.second .rank-img {
+    animation: glowSilver 2s infinite alternate;
+}
+
+.third .rank-img {
+    animation: glowBronze 2s infinite alternate;
+}
+
+@keyframes glowSilver {
+    from { box-shadow: 0 0 10px rgba(192,192,192,0.4); }
+    to { box-shadow: 0 0 25px rgba(192,192,192,0.9); }
+}
+
+@keyframes glowBronze {
+    from { box-shadow: 0 0 10px rgba(205,127,50,0.4); }
+    to { box-shadow: 0 0 25px rgba(205,127,50,0.9); }
+}
+
+.rank-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+
+    /* gradiente dourado */
+    background: linear-gradient(90deg, #ffd700, #fff3b0, #ffd700);
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* brilho */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6),
+                 0 0 18px rgba(255, 215, 0, 0.4);
+
+    /* animação */
+    animation: shine 3s linear infinite;
+}
+
+.rank-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(255,255,255,0.5);
+    margin-top: 5px;
+}
+
+/* animação do brilho passando */
+@keyframes shine {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* FOOTER BASE */
+.footer-insane {
+    background-color: var(--bg);
+    color: var(--text);
+    border-top: 2px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* GRID HACKER ANIMADO */
+.grid-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(46,124,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46,124,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 15s linear infinite;
+}
+@keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(40px,40px); }
+}
+
+/* PARTÍCULAS LEVES */
+.particles::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(var(--primary) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.08;
+    animation: particlesMove 20s linear infinite;
+}
+@keyframes particlesMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(-200px, -200px); }
+}
+
+/* LINHA NEON ANIMADA */
+.neon-line {
+    position: absolute;
+    top: 0;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    animation: neonMove 4s linear infinite;
+}
+@keyframes neonMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* TITULO COM GRADIENTE */
+.footer-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* TEXTO */
+.footer-text {
+    color: var(--text);
+    opacity: 0.7;
+}
+
+/* ICONES SOCIAIS */
+.social-icons i {
+    font-size: 1.6rem;
+    margin: 0 12px;
+    color: var(--primary-dark);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    color: var(--primary);
+    text-shadow: 
+        0 0 10px var(--primary),
+        0 0 20px var(--primary),
+        0 0 40px var(--primary-dark);
+    transform: scale(1.2) translateY(-5px);
+}
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.5); opacity:0.6; }
+    100% { transform: scale(1); opacity:1; }
+}
+
+/* COPY */
+.copy {
+    color: var(--subtext);
+}
+
+/* HR */
+.footer-insane hr {
+    border-color: var(--border);
+    margin: 1rem 0;
+}
+
+/* LOGO COM EFEITO NEON */
+.footer-logo {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo .logo-img {
+    width: 120px; /* ajuste conforme precisar */
+    height: auto;
+    filter: drop-shadow(0 0 8px var(--primary)) 
+            drop-shadow(0 0 15px var(--primary-dark));
+    transition: 0.3s;
+}
+
+.footer-logo .logo-img:hover {
+    filter: drop-shadow(0 0 15px var(--primary)) 
+            drop-shadow(0 0 25px var(--primary-dark)) 
+            drop-shadow(0 0 35px var(--primary));
+    transform: scale(1.1) rotate(-2deg);
+}
+:root {
+    /* Light mode */
+    --btn-text: #ffffff; /* texto do botão claro */
+}
+
+.dark-mode {
+    --btn-text: #ffffff; /* texto do botão também claro */
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #1c2a72, #3a4edb);
+    color: var(--btn-text); /* garante texto claro */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, #3a4edb, #1c2a72);
+    color: var(--btn-text); /* mantém o texto branco */
+}
+
+.btn-custom:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: var(--btn-text);
+}
+
+
+.titulo-efeito {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    position: relative;
+
+    background: linear-gradient(90deg, #6a75b0, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* linha */
+.titulo-efeito::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #2c41a6, #6976d9, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* brilho dentro da linha */
+.titulo-efeito::after::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+    animation: brilhoLinha 2s linear infinite;
+}
+
+/* animações */
+@keyframes moverGradiente {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes brilhoLinha {
+    0% { left: -50%; }
+    100% { left: 100%; }
+}
+
+.logo-energia {
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* brilho bem leve (glass) */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* hover opcional bem clean */
+.logo-energia:hover {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+    transform: scale(1.03);
+}
+
+
+.rank {
+    width: 60%;
+    margin: auto;
+}
+
+.player {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(31, 80, 193, 0.25);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+/* nome + xp */
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+
+:root {
+    --bg: #ffffff;
+    --text-color: #111;
+    --card: rgba(31, 80, 193, 0.15);
+    --bar: #d0d0d0;
+}
+
+body.dark {
+    --bg: #050510;
+    --text-color: #ffffff;
+    --card: rgba(31, 80, 193, 0.25);
+    --bar: #143fbf;
+}
+
+body {
+    background: var(--bg);
+    transition: 0.3s ease;
+}
+
+.player {
+    margin: 20px 0;
+    padding: 15px;
+    background: var(--card);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+.bar {
+    width: 100%;
+    height: 12px;
+    background: var(--bar);
+    border-radius: 20px;
+    overflow: hidden;
+}
+/* barra base */
+.bar {
+    width: 100%;
+    height: 12px;
+    background: #bbbfcb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* preenchimento */
+.fill {
+    height: 100%;
+    width: 0%;
+    
+    background: linear-gradient(
+        90deg,
+        var(--primary-dark),
+        var(--primary),
+        var(--text),
+        var(--primary)
+    );
+
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate,
+               load 1.5s ease forwards;
+
+    border-radius: 20px;
+}
+
+/* animação baseada no XP */
+.fill {
+    width: calc(var(--xp) / 25 * 1%);
+}
+
+@keyframes load {
+    from { width: 0%; }
+}
+
+.nav-link {
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* hover normal */
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* ativo (fixo) */
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* efeito linha (hover + ativo) */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
