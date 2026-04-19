@@ -840,9 +840,6 @@ body.dark-mode .ranking th{
                         <a class="nav-link" href="Inicio.php">Início</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="missoes_semlogin.html">Missões</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="rankingpage.php">Ranking</a>
@@ -870,7 +867,7 @@ body.dark-mode .ranking th{
     </a>
 
     <!-- SAIR -->
-    <button class="btn btn-danger" onclick="window.location.href='logout.php'">
+    <button class="btn btn-custom" onclick="window.location.href='logout.php'">
         <b> Sair</b>
     </button>
 

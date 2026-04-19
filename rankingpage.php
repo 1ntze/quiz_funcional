@@ -75,7 +75,7 @@ $result = $conn->query($sql);
 
                 <!-- SAIR (mesmo modelo de botão simples) -->
                 <button class="btn btn-custom me-2" onclick="window.location.href='logout.php'">
-                    🚪 Sair
+                    Sair
                 </button>
 
             <?php else: ?>
