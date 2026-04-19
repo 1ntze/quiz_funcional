@@ -45,24 +45,12 @@ $total = $res_total->fetch_assoc()['total'];
 if ($_SESSION['pergunta_atual'] > $total) {
 
     unset($_SESSION['pergunta_atual']);
-    unset($_SESSION['mensagem']); // 🔥 ISSO RESOLVE
+    unset($_SESSION['mensagem']);
 
-    echo "
-    <div class='overlay-fim'>
-        <div class='fim-box'>
-            <img src='trofeu.png' class='trofeu'>
-            <h1>🏆 FIM DO QUIZ!</h1>
-            <p>Parabéns, você completou tudo!</p>
-
-            <a href='index.php'>
-                <button>Menu</button>
-            </a>
-        </div>
-    </div>
-    ";
-
+    header("Location: index.php");
     exit();
 }
+
 // buscar pergunta atual
 $id_pergunta = $_SESSION['pergunta_atual'];
 

@@ -1176,6 +1176,10 @@ body.dark-mode .ranking th{
 .quiz-buttons button:hover::before{
     left: 100%;
 }
+.btn-next{
+    color: white !important;
+    font-weight: 700;
+}
 </style>
 </head>
 
@@ -1185,8 +1189,8 @@ body.dark-mode .ranking th{
     <div class="overlay-acerto">
         <div class="acerto-box">
             <img src="acertou.png" class="raposa-win">
-            <h1>Você acertou!</h1>
-            <p>Boa! Seu cérebro recebeu +1 <br>atualização de inteligência 🧠⬆️</p>
+            <h1><b>Você acertou!</b></h1>
+            <p><b> Boa! Seu cérebro recebeu +1 <br>atualização de inteligência</b> 🧠⬆️</p>
         </div>
     </div>
 
@@ -1197,8 +1201,8 @@ body.dark-mode .ranking th{
     <div class="overlay-erro">
         <div class="gameover-box">
             <img src="errou.png" class="raposa-boss">
-            <h1>Você errou!</h1>
-            <p>❌ Errado! Mas relaxa, até o Google já errou.</p>
+            <h1><b> Você errou!</b></h1>
+            <p><b>❌ Errado! Mas relaxa, até o Google já errou.</b></p>
         </div>
     </div>
 <?php } ?>
@@ -1223,9 +1227,7 @@ body.dark-mode .ranking th{
                         <a class="nav-link" href="Inicio.php">Início</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="missoes_semlogin.html">Missões</a>
-                    </li>
+            
 
                     <li class="nav-item">
                         <a class="nav-link" href="rankingpage.php">Ranking</a>

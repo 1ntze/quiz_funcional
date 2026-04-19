@@ -141,11 +141,11 @@
 
                 <?php if(isset($_SESSION['nome'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Missões</a>
+                        <a class="nav-link" href="index.php">Jogos</a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link active" href="missoes_semlogin.php">Missões</a>
+                        <a class="nav-link active" href="missoes_semlogin.php">Jogos</a>
                     </li>
                 <?php endif; ?>
 
