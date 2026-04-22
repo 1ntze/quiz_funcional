@@ -1343,6 +1343,11 @@ body.dark-mode .ranking th{
     50%{ transform: translateX(4px); }
     100%{ transform: translateX(0); }
 }
+
+@keyframes fadeOut {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
 </style>
 
 </head>
@@ -1351,7 +1356,7 @@ body.dark-mode .ranking th{
 <div id="popupInicio" class="popup">
   <div class="popup-box">
 
-    <span class="fechar" onclick="fecharPopup()">×</span>
+
 
     
     <img src="5.png" alt="Ops" class="logo-img">
@@ -1485,46 +1490,108 @@ echo "</pre>";
 const errosCorretos = <?php echo json_encode($lista, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
 const img = document.getElementById("imagemCenario");
 
-document.getElementById("totalErros").innerText = errosCorretos.length;
+// =========================
+// POPUP (CORRIGIDO)
+// =========================
+window.onload = function(){
+    if(sessionStorage.getItem("fechouPopup")){
+        document.getElementById("popupInicio").style.display = "none";
+    }
+}
 
+function fecharPopup(){
+    document.getElementById("popupInicio").style.display = "none";
+    sessionStorage.setItem("fechouPopup", "true");
+}
+
+// =========================
+// DEBUG (opcional)
+// =========================
 console.log("=== DEBUG JS ===");
 console.log("Cenário atual:", <?php echo $cenario_id; ?>);
-console.log("SQL erros:", <?php echo json_encode($sql2); ?>);
 console.table(errosCorretos);
 
-img.addEventListener("mousemove", function(e){
-    const rect = img.getBoundingClientRect();
-
-    const x = (e.clientX - rect.left) - (rect.width / 2);
-    const y = (rect.height / 2) - (e.clientY - rect.top);
-
-    document.getElementById("mx").innerText = Math.round(x);
-    document.getElementById("my").innerText = Math.round(y);
-});
-
+// =========================
+// CLIQUE NA IMAGEM (ÚNICO)
+// =========================
 function clicar(e){
     const rect = e.target.getBoundingClientRect();
 
     const x = (e.clientX - rect.left) - (rect.width / 2);
     const y = (rect.height / 2) - (e.clientY - rect.top);
 
-    document.getElementById("cx").innerText = Math.round(x);
-    document.getElementById("cy").innerText = Math.round(y);
+    let acertou = false;
 
+    errosCorretos.forEach(erro => {
+        if (
+            x >= erro.x_min &&
+            x <= erro.x_max &&
+            y >= erro.y_min &&
+            y <= erro.y_max
+        ) {
+            acertou = true;
+        }
+    });
+
+    // 🎯 FEEDBACK VISUAL
+    if(acertou){
+        mostrarAcertoVisual(x, y);
+    } else {
+        mostrarErroVisual(x, y);
+    }
+
+    // envia pro PHP
     document.getElementById("x").value = x;
     document.getElementById("y").value = y;
 
-    console.log("Clique:", {x: Math.round(x), y: Math.round(y)});
-    document.getElementById("form").submit();
-}
-</script>
-
-<script>
-function fecharPopup(){
-    document.getElementById("popupInicio").style.display = "none";
+    setTimeout(() => {
+        document.getElementById("form").submit();
+    }, 300);
 }
 
+// =========================
+// EFEITOS VISUAIS
+// =========================
+function mostrarErroVisual(x, y){
+    const marker = document.createElement("div");
+
+    marker.style.position = "absolute";
+    marker.style.left = `calc(50% + ${x}px - 15px)`;
+    marker.style.top = `calc(50% - ${y}px - 15px)`;
+
+    marker.style.width = "30px";
+    marker.style.height = "30px";
+    marker.style.borderRadius = "50%";
+    marker.style.border = "3px solid #ef4444";
+    marker.style.boxShadow = "0 0 15px #ef4444";
+    marker.style.pointerEvents = "none";
+    marker.style.animation = "fadeOut 0.8s forwards";
+
+    document.querySelector(".imagem-box").appendChild(marker);
+
+    setTimeout(() => marker.remove(), 800);
+}
+
+function mostrarAcertoVisual(x, y){
+    const marker = document.createElement("div");
+
+    marker.style.position = "absolute";
+    marker.style.left = `calc(50% + ${x}px - 15px)`;
+    marker.style.top = `calc(50% - ${y}px - 15px)`;
+
+    marker.style.width = "30px";
+    marker.style.height = "30px";
+    marker.style.borderRadius = "50%";
+    marker.style.border = "3px solid #22c55e";
+    marker.style.boxShadow = "0 0 15px #22c55e";
+    marker.style.pointerEvents = "none";
+
+    document.querySelector(".imagem-box").appendChild(marker);
+}
+
+// =========================
 // DARK MODE
+// =========================
 function toggleDark(e){
     const body = document.body;
     const btn = document.getElementById("themeBtn");
@@ -1533,26 +1600,14 @@ function toggleDark(e){
 
     if(body.classList.contains("dark-mode")){
         btn.innerHTML = '<i class="bi bi-moon"></i>';
-        btn.classList.add("active");
     }else{
         btn.innerHTML = '<i class="bi bi-sun"></i>';
-        btn.classList.remove("active");
     }
-
-    const circle = document.createElement("span");
-    circle.classList.add("ripple");
-
-    const rect = btn.getBoundingClientRect();
-    circle.style.left = (e.clientX - rect.left) + "px";
-    circle.style.top = (e.clientY - rect.top) + "px";
-
-    btn.appendChild(circle);
-
-    setTimeout(() => {
-        circle.remove();
-    }, 600);
 }
+
+// =========================
 // NAVBAR SCROLL
+// =========================
 window.addEventListener("scroll", function(){
     const navbar = document.querySelector(".navbar");
     if(window.scrollY > 50){

@@ -21,6 +21,7 @@ session_start();
 
 
 <style>
+    
  body:not(.dark-mode) {
     color: #0f172a; /* texto escuro */
     background: rgba(15, 23, 42, 0.05); /* leve fundo pra destacar */
@@ -1566,7 +1567,63 @@ body.dark-mode .ranking th{
     50% { opacity: 1; }
     100% { opacity: 0; transform: translateX(100%); }
 }
+ .descricao-memoria {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    line-height: 1.6;
+  }
 
+  .descricao-memoria strong {
+    color: #00ffea;
+  }
+
+ 
+  }
+
+  /* ========================= */
+/* DESCRIÇÃO MEMÓRIA */
+/* ========================= */
+
+.descricao-memoria {
+    max-width: 500px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+    font-size: 1.1rem;
+
+    color: #e0e0e0;
+    background: rgba(255,255,255,0.05);
+
+    padding: 15px;
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    line-height: 1.6;
+}
+
+.descricao-memoria strong {
+    color: #00ffea;
+}
+
+/* 🌞 LIGHT MODE */
+body:not(.dark-mode) .descricao-memoria {
+    color: #0f172a;
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+body:not(.dark-mode) .descricao-memoria strong {
+    color: #2563eb;
+}
 </style>
 </head>
 
@@ -1632,6 +1689,13 @@ body.dark-mode .ranking th{
 </nav>
 <br><br>
 <h1 class="titulo-holo-min"> DESAFIO DA MEMÓRIA</h1>
+<h1 class="descricao-memoria"> Prepare-se para o <strong>desafio</strong>! 
+Encontre todos os pares escondidos e prove que sua memória é nível <strong>PRO!</strong>
+
+Vire as cartas, memorize cada movimento e use estratégia para vencer! ⚡  
+
+Será que você consegue zerar com a melhor pontuação? 🔥</h1>
+
 <div class="grid" id="game"></div>
 <script>
 const cards = [
