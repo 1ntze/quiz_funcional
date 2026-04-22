@@ -28,7 +28,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="ranking.css">
 
     <!-- Icons -->
-    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
