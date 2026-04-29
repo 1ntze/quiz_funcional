@@ -1,5 +1,7 @@
 <?php
 include("testeconexao.php");
+Session_start();
+
 
 $sql = "
 SELECT nome, xp_total
@@ -31,7 +33,32 @@ $result = $conn->query($sql);
     <link rel="icon" type="image/png" href="icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+<style>
+    .perfil-btn {
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        border: none;
+        color: white !important;
+        border-radius: 50px;
+        padding: 6px 14px;
+        transition: 0.3s;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
+    .perfil-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+    }
+     .avatar-navbar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+    }
+</style>
 <body class="dark-mode">
 
 <!-- NAVBAR -->
@@ -56,9 +83,15 @@ $result = $conn->query($sql);
                     <a class="nav-link" href="inicio.php">Início</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="missoes_semlogin.php">Missões</a>
-                </li>
+                  <?php if (isset($_SESSION['nome'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Jogos</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
+                        </li>
+                    <?php endif; ?>
 
                 <li class="nav-item">
                     <a class="nav-link active" href="rankingpage.php">Ranking</a>
@@ -70,17 +103,23 @@ $result = $conn->query($sql);
                 <i class="bi bi-moon"></i>
             </button>
 
-            <!-- LOGIN / LOGOUT -->
+          <!-- PERFIL / LOGIN / SAIR -->
             <?php if(isset($_SESSION['nome'])): ?>
 
-                <!-- SAIR (mesmo modelo de botão simples) -->
-                <button class="btn btn-custom me-2" onclick="window.location.href='logout.php'">
+                <!-- PERFIL -->
+                <a href="profile.php" class="perfil-btn me-2">
+                    <img src="perfilft.png" class="avatar-navbar">
+                    <?php echo $_SESSION['nome']; ?>
+                </a>
+
+                <!-- SAIR -->
+                <button class="btn btn-custom" onclick="window.location.href='logout.php'">
                     Sair
                 </button>
 
             <?php else: ?>
 
-                <!-- LOGIN (mantido padrão simples) -->
+                <!-- LOGIN -->
                 <button class="btn btn-custom" onclick="window.location.href='../Login/login.php'">
                     Login
                 </button>
@@ -156,11 +195,11 @@ $result = $conn->query($sql);
     </div>
 
     <div class="social-icons mb-4">
-      <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-discord"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-youtube"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-github"></i></a>
-    </div>
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="https://discord.gg/8STKzvKG" class="mx-2"><i class="bi bi-discord"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-youtube"></i></a>
+                <a href="https://github.com/1ntze" class="mx-2"><i class="bi bi-github"></i></a>
+            </div>
 
     <p class="copy small mb-0">
       © 2026 CyberEdu — Projeto Integrador I — Universidade Virtual do

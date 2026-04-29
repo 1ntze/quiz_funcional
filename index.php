@@ -639,7 +639,7 @@ body.dark-mode .ranking th{
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="missoes_semlogin.php">Missões</a>
+                    <a class="nav-link active" href="missoes_semlogin.php">Jogos</a>
                 </li>
 
                 <li class="nav-item">
@@ -782,12 +782,12 @@ body.dark-mode .ranking th{
     </div>
 
     <!-- ÍCONES SOCIAIS -->
-    <div class="social-icons mb-4">
-      <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-discord"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-youtube"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-github"></i></a>
-    </div>
+   <div class="social-icons mb-4">
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="https://discord.gg/8STKzvKG" class="mx-2"><i class="bi bi-discord"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-youtube"></i></a>
+                <a href="https://github.com/1ntze" class="mx-2"><i class="bi bi-github"></i></a>
+            </div>
 
     <!-- COPYRIGHT -->
     <p class="copy small mb-0">© 2026 CyberEdu — Projeto Integrador I — Universidade Virtual do <br> Estado de São Paulo | UNIVESP</p>
