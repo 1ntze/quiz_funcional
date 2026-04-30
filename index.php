@@ -708,8 +708,8 @@ body.dark-mode .ranking th{
                 ✔ <span>Verdadeiro ou Falso</span>
             </a>
 
-            <a href="identificar_golpe.php" class="game-btn golpe">
-                🔎 <span>Identificador de Golpes</span>
+            <a href="dicas.php" class="game-btn golpe">
+                🔎 <span>Dicas de Segurança</span>
             </a>
 
         </div>

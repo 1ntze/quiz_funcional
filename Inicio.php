@@ -128,7 +128,7 @@ $result = $conn->query($sql);
             <?php else: ?>
 
                 <!-- LOGIN -->
-                <button class="btn btn-custom" onclick="window.location.href='../Login/login.php'">
+                <button class="btn btn-custom" onclick="window.location.href='login.php'">
                     Login
                 </button>
 
