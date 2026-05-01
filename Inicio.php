@@ -198,8 +198,8 @@ $result = $conn->query($sql);
                 <div class="col-md-4">
                     <div class="card card-custom p-4 text-center glass-card">
                         <img src="/img/pages/img/1.png" alt="Aprenda" class="card-img-top mb-3 mx-auto card-img">
-                        <h4><b>APRENDA</b></h4>
-                        <p>Descubra como funcionam os digitais!</p>
+                        <h4><b>APRENDA </b></h4>
+                        <p>Descubra como funcionam os golpes digitais e como se proteger deles!</p>
                     </div>
                 </div>
 
@@ -207,7 +207,7 @@ $result = $conn->query($sql);
                     <div class="card card-custom p-4 text-center glass-card">
                         <img src="/img/pages/img/9.png" alt="Teste" class="card-img-top mb-3 mx-auto card-img">
                         <h4><b>TESTE</b></h4>
-                        <p>Identifique golpes em situações simuladas!</p>
+                        <p>Coloque seus conhecimentos à prova com quizzes, verdadeiro ou falso e jogos interativos!</p>
                     </div>
                 </div>
 
@@ -224,7 +224,7 @@ $result = $conn->query($sql);
             <section class="py-5 text-center">
                 <div class="container">
                     <h2 style="color: white;">
-                        <h2 class="titulo-efeito">DESAFIOS DISPONÍVEIS</h2>
+                        <h2 class="titulo-efeito">CONTEÚDOS DISPONÍVEIS</h2>
 
 
                 </div>
@@ -234,29 +234,29 @@ $result = $conn->query($sql);
                     <div class="col-md-3">
                         <div class="card card-custom p-4 text-center glass-card">
                             <img src="/img/pages/img/2.png" alt="Missão 1" class="card-img-top mb-3 mx-auto card-img">
-                            <h4><b>🎯 Caça ao Golpe</b></h4>
-                            <p>Será que você consegue identificar um golpe antes de cair nele? Teste seu radar!</p>
+                            <h4><b>🎯 Quizzes</b></h4>
+                            <p>Aprenda a reconhecer golpes comuns de forma prática, analisando situações reais e identificando sinais de perigo!</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card card-custom p-4 text-center glass-card">
                             <img src="/img/pages/img/7.png" alt="Missão 2" class="card-img-top mb-3 mx-auto card-img">
-                            <h4><b>🛡️ Conta Blindada</b></h4>
-                            <p>Deixe suas contas no modo ultra seguro, sem invasões!</p>
+                            <h4><b>🛡️ Verdadeiro e Falso</b></h4>
+                            <p>Descubra o que é mito ou verdade no mundo digital!</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card card-custom p-4 text-center glass-card">
                             <img src="/img/pages/img/8.png" alt="Missão 3" class="card-img-top mb-3 mx-auto card-img">
-                            <h4><b>⚡ Clique Inteligente</b></h4>
-                            <p>Nem todo link é confiável… você sabe escolher o certo?<br></p>
+                            <h4><b>🧠 Jogo da Memória</b></h4>
+                            <p>Associe termos de segurança e outros conceitos importantes, aprendendo de forma divertida como se proteger digitalmente!<br></p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card card-custom p-4 text-center glass-card">
                             <img src="/img/pages/img/6.png" alt="Missão 4" class="card-img-top mb-3 mx-auto card-img">
-                            <h4><b>🧠 Modo Detetive</b></h4>
-                            <p>Use sua mente pra analisar mensagens e descobrir o que é real ou golpe.</p>
+                            <h4><b>🔒 Dicas do Edu</b></h4>
+                            <p>Conheça boas práticas para se proteger na internet, evitar ataques e manter seus dados seguros no dia a dia!</p>
                         </div>
                     </div>
                 </div>

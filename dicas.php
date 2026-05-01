@@ -17,7 +17,7 @@ $ranking = $conn->query($sqlRanking);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberEdu | Dicas</title>
+    <title>CyberEdu | Dicas do Edu</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1114,7 +1114,10 @@ opacity: 0.9;
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="missoes_semlogin.php">Jogos</a>
+                    <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="missoes_semlogin.php">Dicas do Edu</a>
                 </li>
 
                 <li class="nav-item">
@@ -1248,6 +1251,42 @@ Malware é qualquer programa malicioso que invade teu dispositivo pra roubar dad
                 <div class="card-body">
                     <h5 class="card-title titulo-card-neon"> 🕷 Ransomware</h5>
  Ransomware é um ataque que bloqueia arquivos ou dispositivo e exige pagamento para liberar acesso; para se proteger, evite links suspeitos, não baixe arquivos desconhecidos e mantenha backups atualizados sempre, use antivírus confiável e mantenha sistema atualizado.                </div>
+           
+</div>
+        </div>
+
+    </div>
+     <!-- CARDS 3 -->
+    <div class="row mt-4 g-4">
+
+       <div class="col-md-4">
+    <div class="card cyber-card">
+        <img src="dicacard/wpp.png" class="card-img-top">
+
+        <div class="card-body text-start">
+            <h5 class="card-title titulo-card-neon">🗨 Clonagem de Whatsapp</h5>
+
+            <p>
+“Clonagem de WhatsApp” é quando alguém consegue entrar na sua conta sem permissão. No WhatsApp isso acontece principalmente quando a pessoa pega o código de verificação que chega no seu celular e usa para ativar sua conta em outro aparelho, passando a usar como se fosse você. Também pode acontecer pelo WhatsApp Web se alguém escanear o QR Code do seu celular. Ou seja, não é uma clonagem real, é só o roubo do acesso à conta. </div>
+    </div>
+</div>
+
+        <div class="col-md-4">
+            <div class="card cyber-card">
+                <img src="dicacard/pix.png" class="card-img-top">
+                <div class="card-body">
+                <h5 class="card-title titulo-card-neon">💸 Golpe do Pix</h5>
+                    <p>O golpe do Pix acontece quando alguém te engana para você enviar dinheiro rápido, geralmente fingindo ser banco ou conhecido pelo WhatsApp. Como o Pix é instantâneo, o valor quase não pode ser recuperado. Desconfie de pedidos urgentes e sempre confirme antes de transferir.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card cyber-card">
+                <img src="dicacard/ransoncard.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title titulo-card-neon"> 👁 Man-in-the-Middle</h5>
+ Um ataque Man-in-the-Middle, geralmente em Wi-Fi's públicos acontece quando um invasor fica entre você e a internet, interceptando a conexão. Isso pode ocorrer em redes abertas ou falsas, permitindo que ele veja ou até altere os dados que você envia, principalmente se não estiverem bem protegidos.               </div>
            
 </div>
         </div>

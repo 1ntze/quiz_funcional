@@ -709,7 +709,7 @@ body.dark-mode .ranking th{
             </a>
 
             <a href="dicas.php" class="game-btn golpe">
-                🔎 <span>Dicas de Segurança</span>
+                🔎 <span>Dicas do Edu</span>
             </a>
 
         </div>
