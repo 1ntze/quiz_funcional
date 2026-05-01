@@ -33,7 +33,7 @@ $ranking = $conn->query($sqlRanking);
 </head>
 
 <style>
-    
+
     .titulo-efeito2 {
     text-align: center;
     font-size: 2.2rem;
@@ -83,9 +83,7 @@ overflow-x:hidden;
 
 /* BACKGROUND CYBER */
 background:
-radial-gradient(circle at 20% 30%, rgba(59,130,246,0.2), transparent 40%),
-radial-gradient(circle at 80% 70%, rgba(30,58,138,0.3), transparent 40%),
-linear-gradient(270deg, #020617, #0f172a, #1e3a8a);
+black;
 
 background-size: 200% 200%;
 animation: bgMove 12s ease infinite;
@@ -308,7 +306,7 @@ body.dark-mode .nav-link.active{
 
 /* BOTÕES */
 body.dark-mode button{
-    background:#1e40af;
+    background:black;
 }
 
 /* RANKING */
@@ -636,7 +634,7 @@ body.dark-mode .ranking th{
     position: relative;
     overflow: hidden;
 
-    background: url("dicabg.png") center -10% / 100% no-repeat;
+    background: url("bgn.png") center -10% / 100% no-repeat;
 
     animation: bgZoom 20s ease-in-out infinite alternate;
 }
@@ -656,7 +654,7 @@ body.dark-mode .ranking th{
     position: relative;
     overflow: hidden;
 
-    background: url("dicabg.png") center -10% / 100% no-repeat;
+    background: url("bgn.png") center -10% / 100% no-repeat;
 
     animation: bgZoom 20s ease-in-out infinite alternate;
 }
@@ -677,7 +675,7 @@ body.dark-mode .ranking th{
     position: relative;
     overflow: hidden;
 
-    background: url("dicabg.png") center -10% / 100% no-repeat;
+    background: url("bgn.png") center -10% / 100% no-repeat;
 }
 
 .hero-edu::before,
@@ -695,8 +693,8 @@ body.dark-mode .ranking th{
     background: linear-gradient(
         120deg,
         transparent 25%,
-        rgba(0,255,255,0.25),
-        rgba(255,0,255,0.25),
+        rgba(0, 234, 255, 0.25),
+        rgba(255, 0, 0, 0.25),
         transparent 75%
     );
 
@@ -900,18 +898,23 @@ opacity: 0.9;
 }
 
 
-.carousel-control-prev-icon::after {
-    content: "‹";
-    font-size: 40px;
-    color: #00e5ff;
-  
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    color: #ef4444; /* 🔴 vermelho cyber */
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
 }
 
-.carousel-control-next-icon::after {
-    content: "›";
-    font-size: 40px;
-    color: #00e5ff;
-   
+/* hover mais agressivo */
+.carousel-control-prev:hover .carousel-control-prev-icon::after,
+.carousel-control-next:hover .carousel-control-next-icon::after {
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 1);
+}
+
+/* fundo invisível mais clean */
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent !important;
 }
 
 
@@ -1031,6 +1034,29 @@ opacity: 0.9;
   position: relative;
 }
 
+.glass-title2 {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+  background: linear-gradient(90deg, #0f8935b6, #2374b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+}
+.glass-title2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, transparent, #00aaed, transparent);
+  opacity: 0.7;
+}
+
 .glass-title::after {
   content: "";
   display: block;
@@ -1084,6 +1110,633 @@ opacity: 0.9;
 @keyframes aimLock {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.15); opacity: 1; }
+}
+.cyber-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #0f172a;
+}
+
+/* ✨ partículas sempre visíveis */
+.cyber-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("https://assets.codepen.io/13471/sparkles.gif");
+    background-size: cover;
+
+    mix-blend-mode: overlay;
+    opacity: 0.25;
+
+    pointer-events: none;
+}
+
+/* 🌈 brilho holográfico sempre ativo */
+.cyber-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 20%,
+     rgba(239,68,68,0.25),
+rgba(220,38,38,0.25),
+rgba(239,68,68,0.25),
+        transparent 80%
+    );
+
+    animation: holoMove 4s linear infinite;
+    opacity: 0.6; /* 👈 agora sempre visível */
+}
+
+/* animação */
+@keyframes holoMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.polaroid {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.polaroid-inner {
+  background: #f4f1e8;
+  padding: 14px 14px 25px;
+  position: relative;
+
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(120deg, rgba(255,255,255,0.3), rgba(0,0,0,0.1));
+  background-size: 4px 4px, 100% 100%;
+
+  border-radius: 6px 8px 5px 10px;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.6),
+    inset 0 0 30px rgba(0,0,0,0.15);
+
+  transform: rotate(-2deg);
+  transform-origin: center bottom;
+  transition: 0.4s;
+}
+
+/* rotação aleatória CORRETA */
+.polaroid:nth-child(odd) .polaroid-inner {
+  transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(even) .polaroid-inner {
+  transform: rotate(2.5deg);
+}
+
+/* efeitos AGORA no lugar certo */
+.polaroid-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 60%,
+    rgba(0,0,0,0.25) 100%
+  );
+}
+
+.polaroid-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    transparent 20%,
+    transparent 80%,
+    rgba(0,0,0,0.2)
+  );
+}
+
+/* imagem */
+.polaroid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+ 
+  border-radius: 3px;
+}
+
+/* texto */
+.caption h3,
+.caption p {
+  font-family: 'Courier New', monospace;
+  color: black;
+}
+
+/* hover PERFEITO */
+.polaroid:hover .polaroid-inner {
+  transform: scale(1.08) rotate(0deg) translateY(-10px);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.8),
+    0 0 20px rgba(255,0,0,0.3);
+}
+
+/* botões (sem bootstrap azul) */
+.carousel-btn {
+  all: unset;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  background: black;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* track */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: transform 0.5s ease;
+  width: max-content;
+}
+
+/* container */
+.polaroid-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 60px 20px; /* 🔥 evita corte */
+}
+
+.netflix-row{
+  display:flex;
+  gap:25px;
+  overflow-x:auto;
+  padding:20px;
+  position:relative;
+}
+
+.netflix-card{
+  min-width:220px;
+  height:330px;
+  border-radius:14px;
+  background-size:cover;
+  background-position:center;
+  cursor:pointer;
+  position:relative;
+  transition: all 0.4s ease;
+  z-index:1;
+}
+
+/* TEXTO */
+.netflix-card span{
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  font-weight:bold;
+  background:rgba(0,0,0,0.7);
+  padding:6px 12px;
+  border-radius:6px;
+}
+
+/* 🔥 HOVER ESTILO NETFLIX */
+.netflix-row:hover .netflix-card{
+  opacity:0.3;
+  transform: scale(0.95);
+  filter: blur(1px);
+}
+
+.netflix-card:hover{
+  transform: scale(1.3);
+  opacity:1 !important;
+  filter: blur(0) !important;
+  z-index:10;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.8),
+    0 0 30px rgba(239,68,68,0.7);
+}
+
+/* LEVE DESLOCAMENTO LATERAL (efeito Netflix real) */
+.netflix-card:hover ~ .netflix-card{
+  transform: translateX(40px);
+}.netflix-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+
+  opacity:0;
+  transition:0.3s;
+}
+
+.netflix-modal.show{
+  display:flex;
+  opacity:1;
+}
+
+.netflix-content{
+  background:#0f172a;
+  padding:35px;
+  border-radius:18px;
+  max-width:550px;
+  width:90%;
+  text-align:left;
+
+  transform: scale(0.8);
+  transition:0.3s;
+
+  box-shadow:
+    0 0 40px rgba(59,130,246,0.5),
+    0 0 80px rgba(0,0,0,0.8);
+}
+
+.netflix-modal.show .netflix-content{
+  transform: scale(1);
+}
+
+.reco-row{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+.reco-card{
+  width:100px;
+  height:140px;
+  border-radius:8px;
+  background-size:cover;
+  background-position:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.reco-card:hover{
+  transform:scale(1.1);
+}
+
+.netflix-content.expanded{
+  width: 900px;
+  max-width: 95%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* HERO */
+.modal-hero{
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display:flex;
+  align-items:flex-end;
+}
+
+.modal-hero .overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to top, #0f172a 20%, transparent);
+}
+
+.hero-info{
+  position:relative;
+  padding:25px;
+  z-index:2;
+}
+
+.hero-info h1{
+  font-size:32px;
+  font-weight:bold;
+}
+
+.tags span{
+  background:#ef4444;
+  padding:4px 10px;
+  margin-right:5px;
+  border-radius:5px;
+  font-size:12px;
+}
+
+/* BOTÕES */
+.modal-actions{
+  margin-top:15px;
+}
+
+.btn-play{
+  background:#ef4444;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  margin-right:10px;
+  color:white;
+  cursor:pointer;
+}
+
+.btn-info{
+  background:#334155;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+
+/* DETALHES */
+.modal-details{
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+.modal-details .col{
+  flex:1;
+  background:#020617;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* FUNDO DO MODAL */
+.netflix-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* CONTEÚDO */
+.netflix-content {
+  width: 85%;
+  max-width: 1100px;
+  background: #141414;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* BOTÃO FECHAR */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  background: #e50914;
+}
+
+/* HERO */
+.modal-hero {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #141414 10%, transparent 60%);
+}
+
+.hero-info {
+  position: relative;
+  padding: 30px;
+  max-width: 600px;
+}
+
+/* TÍTULO */
+.hero-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* TAGS */
+.tags {
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.tag.highlight {
+  background: #e50914;
+}
+
+/* TEXTO */
+.hero-info p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* BOTÕES */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #e50914;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #ff1f2d;
+  transform: scale(1.05);
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* DETALHES */
+.modal-details {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+}
+
+.modal-details .col {
+  flex: 1;
+}
+
+.modal-details h4 {
+  margin-bottom: 8px;
+}
+
+.modal-details p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* RECOMENDAÇÕES */
+.reco-section {
+  padding: 20px;
+}
+
+.reco-section h4 {
+  margin-bottom: 10px;
+}
+
+.reco-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+/* CARD */
+.reco-row .card2 {
+  min-width: 150px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.reco-row .card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+/* SCROLL BONITO */
+.reco-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reco-row::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}/* LINHA */
+.reco-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* SCROLL SUAVE */
+.reco-row::-webkit-scrollbar {
+  height: 6px;
+}
+.reco-row::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+
+
+/* OVERLAY ESCURO */
+.card2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent 60%);
+}
+
+/* TEXTO */
+.card-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.card-overlay h5 {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* HOVER BONITO */
+.card2:hover {
+  transform: scale(1.15);
+  z-index: 5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* EFEITO NOS VIZINHOS */
+.reco-row:hover .card2 {
+  opacity: 0.4;
+}
+
+.reco-row .card2:hover {
+  opacity: 1;
+}
+.reco-header,
+.reco-row {
+  padding-left: 40px; /* ajusta aqui o quanto quer mover 👉 */
 }
 
 </style>
@@ -1273,7 +1926,7 @@ Malware é qualquer programa malicioso que invade teu dispositivo pra roubar dad
 
         <div class="col-md-4">
             <div class="card cyber-card">
-                <img src="dicacard/pix.png" class="card-img-top">
+                <img src="dicacard/link.png" class="card-img-top">
                 <div class="card-body">
                 <h5 class="card-title titulo-card-neon">➯ Links Maliciosos</h5>
                     <p>Links maliciosos são links falsos criados para enganar pessoas e roubar informações ou causar danos. Eles imitam sites confiáveis e, ao clicar, podem levar a páginas que pedem dados pessoais ou instalam vírus no dispositivo. Normalmente são enviados por mensagens, e-mails ou redes sociais e exploram a confiança ou curiosidade do usuário para fazê-lo clicar.</p>
@@ -1298,136 +1951,168 @@ Malware é qualquer programa malicioso que invade teu dispositivo pra roubar dad
 
 <section class="container mt-5">
 
-<h2 class="titulo-efeito2 text-start">
-🔐 Dicas Rápidas de Segurança
-</h2>
+  <div class="polaroid-carousel">
 
-<div id="cyberCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+    <button class="carousel-btn prev">❮</button>
 
-<div class="carousel-inner">
+    <div class="carousel-track">
 
-    <!-- ITEM 1 -->
-    <div class="carousel-item active">
-        <div class="cyber-slide-img">
-
-            <img src="img/cyber-senha.jpg" class="d-block w-100">
-
-            <div class="cyber-overlay">
-                <h3>🔑 Senhas Fortes</h3>
-                <p>Use combinações complexas com letras, números e símbolos.</p>
-            </div>
-
+      <div class="polaroid">
+        <div class="polaroid-inner">
+          <img src="dicacard/origem.png">
+          <div class="caption">
+            <br>
+          <h3 style="font-size: 20px;"><b> Primeiros Vírus</b></h3>
+            <p>O Brain (1986) foi o primeiro vírus de PC IBM PC.
+Entrava por disquete ao ligar o computador e se copiava para outros. Não era destrutivo, mas mostrou que o boot controla tudo.</p>
+          </div>
         </div>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-inner">
+          <img src="dicacard/cp.png">
+          <div class="caption">
+            <br>
+           <h3 style="font-size: 20px;"><b>Creeper</b></h3>
+            <p>Criado em 1971, foi um dos primeiros programas a se espalhar sozinho. Ele só mostrava a mensagem: “I’m the creeper, catch me if you can!”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-inner">
+          <img src="dicacard/ily.png">
+          <div class="caption">
+             <br>
+             <h3 style="font-size: 20px;"> <b>I love you ♡</b></h3>
+            <p>Foi um worm de 2000 — um tipo de vírus que se espalha sozinho pela rede — disfarçado de “carta de amor”. Ao abrir, infectava o PC, apagava arquivos e se enviava para contatos, atingindo milhões.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-inner">
+          <img src="dicacard/419.png">
+          <div class="caption">
+            <br>
+            <h3 style="font-size: 20px;"> <b> ♕ Príncipe Nigeriano (419)</b></h3>
+            <p>O golpe 419 é uma fraude por e-mail que promete dinheiro fácil, como heranças ou prêmios. Para receber, a vítima paga taxas antecipadas e nunca vê o valor. O nome vem da lei da Nigéria contra esse tipo de crime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-inner">
+          <img src="dicacard/engs.png">
+          <div class="caption">
+              <br>
+            <h3 style="font-size: 20px;"> <b> Eng. Social X Erro Humano</b></h3>
+            <p>Engenharia social é quando golpistas enganam pessoas em vez de atacar sistemas. Eles fingem ser bancos, empresas ou conhecidos para roubar senhas e dados. O foco do golpe é o erro humano, não a tecnologia.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- ITEM 2 -->
-    <div class="carousel-item">
-        <div class="cyber-slide-img">
+    <button class="carousel-btn next">❯</button>
 
-            <img src="img/2fa.jpg" class="d-block w-100">
+  </div>
 
-            <div class="cyber-overlay">
-                <h3>Autenticação em 2 Fatores</h3>
-                <p>A autenticação em dois fatores (2FA) é uma forma de segurança que protege suas contas exigindo duas etapas para confirmar sua identidade. Primeiro, você digita sua senha normalmente, que é algo que você sabe. Depois disso, o sistema pede uma segunda confirmação, que geralmente é um código enviado para o seu celular ou gerado por um aplicativo autenticador. Isso significa que mesmo que alguém descubra sua senha, essa pessoa ainda não consegue acessar sua conta sem ter acesso ao seu celular ou ao segundo código. É como se sua conta tivesse duas portas de segurança: a primeira é a senha e a segunda é uma confirmação extra que só você consegue acessar. Essa camada adicional dificulta muito invasões e golpes, tornando suas contas bem mais seguras.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ITEM 3 -->
-    <div class="carousel-item">
-        <div class="cyber-slide-img">
-
-            <img src="img/wifi-publico.jpg" class="d-block w-100">
-
-            <div class="cyber-overlay">
-                <h3>🌐 Wi-Fi Público</h3>
-                <p>Redes abertas podem expor seus dados pessoais.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ITEM 4 -->
-    <div class="carousel-item">
-        <div class="cyber-slide-img">
-
-            <img src="dicabg.png" class="d-block w-100">
-
-            <div class="cyber-overlay">
-                <h3>💸 Golpes de Pix</h3>
-                <p>Sempre confirme antes de transferir qualquer valor.</p>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<!-- CONTROLES -->
-<button class="carousel-control-prev" type="button" data-bs-target="#cyberCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" type="button" data-bs-target="#cyberCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
 </section>
-<div class="cyber-carousel">
-<br><br>
-  <h2 class="titulo-efeito2" style="text-align: left; width: 70%; margin: 0; display: block; ">
-    VOCÊ SABIA?
-</h2>
 
     <div class="cyber-track">
 
-        <div class="cyber-slide active">
-            <img src="img/phishing.png" alt="">
-            <div class="cyber-text">
-                <h3>Origem dos Vírus de Computador </h3>
-                <p>O primeiro vírus de computador, chamado “Creeper”, foi criado em 1971 como uma experiência. Desde então, os vírus evoluíram significativamente, tornando a cibersegurança uma prioridade.</p>
-            </div>
+</div>
+
+<section class="container mt-5">
+
+  <div class="scope" id="scope">
+  <div class="scope-inner"></div>
+</div>
+
+<h2 class="glass-title">
+  <b>IDENTIFIQUE E REAJA</b>
+</h2>
+<BR>
+<div class="netflix-row">
+
+  <div class="netflix-card" onclick="openModal('phishing')"
+    style="background-image:url('dicacard/netphishing.png')">
+    <span>PHISHING</span>
+  </div>
+
+  <div class="netflix-card" onclick="openModal('banco')"
+    style="background-image:url('dicacard/pix.png')">
+    <span>GOLPE BANCÁRIO</span>
+  </div>
+
+  <div class="netflix-card" onclick="openModal('boleto')"
+    style="background-image:url('dicacard/link.png')">
+    <span>BOLETO FALSO</span>
+  </div>
+
+  <div class="netflix-card" onclick="openModal('promo')"
+    style="background-image:url('dicacard/wpp2.png')">
+    <span>PROMOÇÕES FALSAS</span>
+  </div>
+
+  <div class="netflix-card" onclick="openModal('site')"
+    style="background-image:url('dicacard/malwarecard.png')">
+    <span>SITES FALSOS</span>
+  </div>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+<div id="netflixModal" class="netflix-modal">
+  <div class="netflix-content expanded">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <!-- CAPA GRANDE -->
+    <div class="modal-hero" id="modalHero">
+      <div class="overlay"></div>
+
+      <div class="hero-info">
+        <h1 id="modalTitle"></h1>
+
+        <div class="tags">
+          <span>Segurança</span>
+          <span>Educação</span>
+          <span>Digital</span>
         </div>
 
-        <div class="cyber-slide">
-            <img src="img/senha-fraca.png" alt="">
-            <div class="cyber-text">
-                <h3>Custo das Violações de Dados</h3>
-                <p>Em 2023, o custo médio de uma violação de dados foi de aproximadamente $4,45 milhões. Isso destaca a importância de investir em medidas preventivas.</p>
-            </div>
+        <p id="modalText"></p>
+
+        <div class="modal-actions">
+          <button class="btn-play">⚠️ Como identificar?</button>
+          <button class="btn-info">🛡 Como se proteger?</button>
         </div>
-
-        <div class="cyber-slide">
-            <img src="img/wifi-publico.png" alt="">
-            <div class="cyber-text">
-                <h3>Senhas Fracas</h3>
-                <p>Estudos mostram que “123456” e “password” ainda são senhas comuns, facilitando o trabalho dos hackers. A adoção de senhas fortes e únicas é essencial..</p>
-            </div>
-        </div>
-
-        <div class="cyber-slide">
-            <img src="img/2fa.png" alt="">
-            <div class="cyber-text">
-                <h3>Atualizações Regulares
-
-</h3>
-                <p>Mantenha todos os sistemas e softwares atualizados para proteger contra vulnerabilidades conhecidas.</p>
-            </div>
-        </div>
-
+      </div>
     </div>
 
-  <div class="cyber-indicator">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <!-- DETALHES -->
+    <div class="modal-details">
+      <div class="col">
+        <h4>💡 <b>O QUE FAZER?</b></h4>
+        <p id="modalDo"></p>
+      </div>
+
+      <div class="col">
+        <h4>🚨<b> SINAIS DE GOLPE</b></h4>
+        <p id="modalSigns"></p>
+      </div>
+    </div>
+
+   <div class="reco-header">
+  <h4>🔥 <b>Recomendados</b></h4>
 </div>
 
+<div id="recommendations" class="reco-row"></div>
+  </div>
 </div>
-
 
 <!-- FOOTER -->
 <footer class="footer-insane position-relative overflow-hidden mt-5">
@@ -1584,4 +2269,160 @@ function typeWriter() {
 
 document.addEventListener("DOMContentLoaded", typeWriter);
 
+
+
+const track = document.querySelector('.carousel-track');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let scrollAmount = 0;
+
+function getCardWidth() {
+  const card = document.querySelector('.polaroid');
+  const style = window.getComputedStyle(track);
+  const gap = parseInt(style.gap) || 0;
+
+  return card.offsetWidth + gap;
+}
+
+function getMaxScroll() {
+  return track.scrollWidth - track.parentElement.offsetWidth;
+}
+
+nextBtn.addEventListener('click', () => {
+  scrollAmount += getCardWidth();
+
+  if (scrollAmount > getMaxScroll()) {
+    scrollAmount = getMaxScroll();
+  }
+
+  track.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+  scrollAmount -= getCardWidth();
+
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+
+  track.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+
+
+function closeModal(){
+  const modal = document.getElementById("netflixModal");
+
+  modal.classList.remove("show");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 300);
+}
+
+/* fechar clicando fora */
+window.addEventListener("click", (e)=>{
+  const modal = document.getElementById("netflixModal");
+  if(e.target === modal){
+    closeModal();
+  }
+});
+const database = {
+  phishing: {
+    title: "🎣 Phishing",
+    img: "dicacard/netphishing.png",
+    text: "Phishing é um golpe em que alguém tenta te enganar para roubar seus dados, fingindo ser uma empresa, banco ou serviço confiável.",
+    do: "Quando você identificar um possível phishing, não clique em nenhum link e não baixe anexos. Não forneça dados pessoais, senhas ou códigos de verificação. Se a mensagem parecer ser de uma empresa ou banco, acesse o site ou aplicativo oficial diretamente pelo navegador para confirmar a informação. Também é importante apagar a mensagem e, se possível, denunciar o golpe na própria plataforma ou serviço.",
+    signs: "Os sinais de phishing incluem mensagens com urgência ou pressão para você agir rápido, como avisos de bloqueio de conta ou perda de acesso, links estranhos ou diferentes do endereço oficial da empresa, páginas ou mensagens com erros de português e formatação estranha, pedidos inesperados de senhas, códigos de verificação ou dados pessoais, além de remetentes desconhecidos ou que se passam por empresas conhecidas de forma suspeita.",
+    tags: ["link","fake","dados"]
+  },
+
+  banco: {
+    title: "🏦 Golpe Bancário",
+    img: "dicacard/pix.png",
+    text: "Criminosos fingem ser bancos para roubar dinheiro.",
+    do: "Nunca passe códigos ou senhas.",
+    signs: "Pedido urgente, ligação estranha, pressão.",
+    tags: ["dinheiro","urgente"]
+  },
+
+  boleto: {
+    title: "📄 Boleto Falso",
+    img: "dicacard/link.png",
+    text: "Boletos adulterados desviam seu pagamento.",
+    do: "Confira o nome do beneficiário.",
+    signs: "Valor estranho, código alterado.",
+    tags: ["dinheiro","fake"]
+  },
+
+  promo: {
+    title: "🎁 Promoção Falsa",
+    img: "dicacard/wpp2.png",
+    text: "Ofertas falsas para roubar dados.",
+    do: "Desconfie de promoções irreais.",
+    signs: "Muito barato, prazo urgente.",
+    tags: ["link","fake"]
+  },
+
+  site: {
+    title: "🌐 Site Falso",
+    img: "dicacard/malwarecard.png",
+    text: "Sites clonados roubam informações.",
+    do: "Verifique HTTPS e domínio.",
+    signs: "URL estranha, layout estranho.",
+    tags: ["link","fake"]
+  }
+};
+
+/* ABRIR MODAL + IA */
+function openModal(type){
+  const data = database[type];
+  const modal = document.getElementById("netflixModal");
+
+  document.getElementById("modalTitle").innerText = data.title;
+  document.getElementById("modalText").innerText = data.text;
+  document.getElementById("modalDo").innerText = data.do;
+  document.getElementById("modalSigns").innerText = data.signs;
+
+  document.getElementById("modalHero").style.backgroundImage = `url('${data.img}')`;
+
+  // IA recomenda
+  const recos = getRecommendations(type);
+  const container = document.getElementById("recommendations");
+  container.innerHTML = "";
+
+  recos.forEach(r => {
+    const item = database[r.key];
+
+    container.innerHTML += `
+      <div class="reco-card"
+        style="background-image:url('${item.img}')"
+        onclick="openModal('${r.key}')">
+      </div>
+    `;
+  });
+
+  modal.style.display = "flex";
+  setTimeout(()=> modal.classList.add("show"), 10);
+}
+function getRecommendations(current){
+  const currentTags = database[current].tags;
+
+  let scores = [];
+
+  for(let key in database){
+    if(key === current) continue;
+
+    let match = database[key].tags.filter(tag =>
+      currentTags.includes(tag)
+    ).length;
+
+    scores.push({key, score: match});
+  }
+
+  return scores
+    .sort((a,b) => b.score - a.score)
+    .slice(0,3);
+}
 </script>
