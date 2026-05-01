@@ -1261,7 +1261,7 @@ Malware é qualquer programa malicioso que invade teu dispositivo pra roubar dad
 
        <div class="col-md-4">
     <div class="card cyber-card">
-        <img src="dicacard/wpp.png" class="card-img-top">
+        <img src="dicacard/wpp2.png" class="card-img-top">
 
         <div class="card-body text-start">
             <h5 class="card-title titulo-card-neon">🗨 Clonagem de Whatsapp</h5>
@@ -1275,15 +1275,15 @@ Malware é qualquer programa malicioso que invade teu dispositivo pra roubar dad
             <div class="card cyber-card">
                 <img src="dicacard/pix.png" class="card-img-top">
                 <div class="card-body">
-                <h5 class="card-title titulo-card-neon">💸 Golpe do Pix</h5>
-                    <p>O golpe do Pix acontece quando alguém te engana para você enviar dinheiro rápido, geralmente fingindo ser banco ou conhecido pelo WhatsApp. Como o Pix é instantâneo, o valor quase não pode ser recuperado. Desconfie de pedidos urgentes e sempre confirme antes de transferir.</p>
+                <h5 class="card-title titulo-card-neon">➯ Links Maliciosos</h5>
+                    <p>Links maliciosos são links falsos criados para enganar pessoas e roubar informações ou causar danos. Eles imitam sites confiáveis e, ao clicar, podem levar a páginas que pedem dados pessoais ou instalam vírus no dispositivo. Normalmente são enviados por mensagens, e-mails ou redes sociais e exploram a confiança ou curiosidade do usuário para fazê-lo clicar.</p>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card cyber-card">
-                <img src="dicacard/ransoncard.png" class="card-img-top">
+                <img src="dicacard/maninmiddle.png" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title titulo-card-neon"> 👁 Man-in-the-Middle</h5>
  Um ataque Man-in-the-Middle, geralmente em Wi-Fi's públicos acontece quando um invasor fica entre você e a internet, interceptando a conexão. Isso pode ocorrer em redes abertas ou falsas, permitindo que ele veja ou até altere os dados que você envia, principalmente se não estiverem bem protegidos.               </div>
