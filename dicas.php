@@ -2033,6 +2033,7 @@ Entrava por disquete ao ligar o computador e se copiava para outros. Não era de
 <h2 class="glass-title">
   <b>IDENTIFIQUE E REAJA</b>
 </h2>
+ Clique para conhecer os sinais e saber como agir contra golpes e ataques digitais!
 <BR>
 <div class="netflix-row">
 
@@ -2042,22 +2043,22 @@ Entrava por disquete ao ligar o computador e se copiava para outros. Não era de
   </div>
 
   <div class="netflix-card" onclick="openModal('banco')"
-    style="background-image:url('dicacard/pix.png')">
-    <span>GOLPE BANCÁRIO</span>
+    style="background-image:url('dicacard/bancario.png')">
+    <span>GOLPES BANCÁRIOS</span>
   </div>
 
   <div class="netflix-card" onclick="openModal('boleto')"
-    style="background-image:url('dicacard/link.png')">
-    <span>BOLETO FALSO</span>
+    style="background-image:url('dicacard/egito.png')">
+    <span>BOLETOS FALSOS</span>
   </div>
 
   <div class="netflix-card" onclick="openModal('promo')"
-    style="background-image:url('dicacard/wpp2.png')">
+    style="background-image:url('dicacard/Velo.png')">
     <span>PROMOÇÕES FALSAS</span>
   </div>
 
   <div class="netflix-card" onclick="openModal('site')"
-    style="background-image:url('dicacard/malwarecard.png')">
+    style="background-image:url('dicacard/SITE.png')">
     <span>SITES FALSOS</span>
   </div>
 
@@ -2330,7 +2331,7 @@ window.addEventListener("click", (e)=>{
 });
 const database = {
   phishing: {
-    title: "🎣 Phishing",
+    title: "Phishing",
     img: "dicacard/netphishing.png",
     text: "Phishing é um golpe em que alguém tenta te enganar para roubar seus dados, fingindo ser uma empresa, banco ou serviço confiável.",
     do: "Quando você identificar um possível phishing, não clique em nenhum link e não baixe anexos. Não forneça dados pessoais, senhas ou códigos de verificação. Se a mensagem parecer ser de uma empresa ou banco, acesse o site ou aplicativo oficial diretamente pelo navegador para confirmar a informação. Também é importante apagar a mensagem e, se possível, denunciar o golpe na própria plataforma ou serviço.",
@@ -2339,38 +2340,38 @@ const database = {
   },
 
   banco: {
-    title: "🏦 Golpe Bancário",
-    img: "dicacard/pix.png",
+    title: "Golpes Bancários",
+    img: "dicacard/bancario.png",
     text: "Criminosos fingem ser bancos para roubar dinheiro.",
-    do: "Nunca passe códigos ou senhas.",
-    signs: "Pedido urgente, ligação estranha, pressão.",
+    do: "Pra se proteger de golpes bancários, o principal é manter a calma e não agir na pressa. Nunca clique em links de mensagens suspeitas — entre sempre no app do banco por conta própria. Não compartilhe senha, código de verificação ou dados do cartão com ninguém. Ative a verificação em duas etapas, evite usar Wi-Fi público e mantenha o celular atualizado. Se algo parecer estranho, pare e confirme direto com o banco antes de fazer qualquer ação.",
+    signs: "Os sinais de phishing incluem mensagens com urgência ou pressão para agir rápido, links suspeitos ou diferentes do site oficial, erros de português ou formatação estranha, pedidos de senha, códigos de verificação ou dados pessoais, além de remetentes desconhecidos ou que imitam empresas conhecidas.",
     tags: ["dinheiro","urgente"]
   },
 
   boleto: {
-    title: "📄 Boleto Falso",
-    img: "dicacard/link.png",
+    title: "Boletos Falsos",
+    img: "dicacard/egito.png",
     text: "Boletos adulterados desviam seu pagamento.",
-    do: "Confira o nome do beneficiário.",
-    signs: "Valor estranho, código alterado.",
+    do: "Se você encontrar um boleto suspeito ou adulterado, não pague. Confira os dados diretamente no site oficial da empresa ou fale com o atendimento verdadeiro para confirmar. Nunca use links ou contatos que vieram junto com o boleto. Se já tiver pago, avise seu banco imediatamente para tentar bloquear o valor e registre um boletim de ocorrência. Também vale guardar prints e comprovantes, porque isso ajuda na investigação e possível recuperação do dinheiro.",
+    signs: "Os principais sinais de boleto adulterado são nome do beneficiário diferente do esperado, CNPJ que não corresponde à empresa, valor alterado ou estranho, código de barras que direciona para outra conta, erros de português ou formatação e boletos recebidos por links ou mensagens suspeitas com urgência para pagamento. Também é comum o documento parecer visualmente correto, mas ao conferir os dados bancários, eles não batem com os oficiais da empresa.",
     tags: ["dinheiro","fake"]
   },
 
   promo: {
-    title: "🎁 Promoção Falsa",
-    img: "dicacard/wpp2.png",
+    title: "Promoções Falsas",
+    img: "dicacard/Velo.png",
     text: "Ofertas falsas para roubar dados.",
-    do: "Desconfie de promoções irreais.",
-    signs: "Muito barato, prazo urgente.",
+    do: "Não clique no link, não informe seus dados e não faça pagamento. Saia da página e confirme a oferta no site oficial digitando o endereço. Denuncie a mensagem na plataforma e, se tiver inserido dados ou tentado pagar, avise o banco.",
+    signs: "Promoções falsas geralmente têm sinais claros: urgência exagerada tipo “só hoje”, preços bons demais pra ser verdade, links estranhos que imitam sites reais, erros de português ou visual mal feito, pedidos de dados sensíveis e formas de pagamento suspeitas como PIX direto pra pessoa física. Se algo parecer bom demais, desconfia.",
     tags: ["link","fake"]
   },
 
   site: {
-    title: "🌐 Site Falso",
-    img: "dicacard/malwarecard.png",
+    title: "Sites Falsos",
+    img: "dicacard/SITE.png",
     text: "Sites clonados roubam informações.",
-    do: "Verifique HTTPS e domínio.",
-    signs: "URL estranha, layout estranho.",
+    do: "Para não cair em golpes, o mais importante é agir com calma e sempre desconfiar antes de clicar ou preencher qualquer coisa.Verifique o endereço do site e confirme se é realmente o oficial, sem variações estranhas.Evite acessar links recebidos por mensagem ou redes sociais, prefira entrar diretamente pelo site digitando o endereço.Não confie em ofertas muito vantajosas ou com senso de urgência, pois isso é usado para te pressionar.Sempre pesquise a reputação da página antes de comprar ou informar dados.E, principalmente, nunca informe senha, códigos ou dados do cartão em sites que gerem dúvida, pois isso pode comprometer suas contas e seu dinheiro.",
+    signs: "Os principais sinais de um site fraudulento são erros no endereço, como letras trocadas, palavras a mais ou um domínio diferente do site oficial, pois golpistas criam links muito parecidos para enganar.Outro sinal comum são ofertas exageradas ou mensagens de urgência, que pressionam o usuário a agir sem pensar.A falta de informações confiáveis da empresa, como contato real ou identificação, também indica risco.Além disso, erros de português, layout estranho ou mal feito podem ser indícios importantes.Por fim, pedidos incomuns de dados sensíveis, como senha, códigos ou informações completas do cartão, são um dos sinais mais claros de fraude.",
     tags: ["link","fake"]
   }
 };

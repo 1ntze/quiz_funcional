@@ -641,7 +641,10 @@ body.dark-mode .ranking th{
                 <li class="nav-item">
                     <a class="nav-link active" href="missoes_semlogin.php">Jogos</a>
                 </li>
-
+            <li class="nav-item">
+                    <a class="nav-link" href="dicas.php">Dicas do Edu</a>
+                </li>
+            </ul>
                 <li class="nav-item">
                     <a class="nav-link" href="rankingpage.php">Ranking</a>
                 </li>
