@@ -82,29 +82,38 @@ $result = $conn->query($sql);
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
+<!-- LINKS -->
+<ul class="navbar-nav me-auto">
 
-                <!-- LINKS -->
-                <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link active" href="Inicio.php">Início</a>
+    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Inicio.php">Início</a>
-                    </li>
+    <?php if (isset($_SESSION['nome'])): ?>
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">Jogos</a>
+        </li>
+    <?php else: ?>
+        <li class="nav-item">
+            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
+        </li>
+    <?php endif; ?>
 
-                    <?php if (isset($_SESSION['nome'])): ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Jogos</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
-                        </li>
-                    <?php endif; ?>
+    
+    <?php if (isset($_SESSION['nome'])): ?>
+        <li class="nav-item">
+            <a class="nav-link" href="dicas.php">Dicas do Edu</a>
+        </li>
+    <?php else: ?>
+        
+        
+    <?php endif; ?>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="rankingpage.php">Ranking</a>
-                    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="rankingpage.php">Ranking</a>
+    </li>
 
-                </ul>
+</ul>
 
                 <!-- BOTÃO DARK MODE -->
                 <button onclick="toggleDark(event)" id="themeBtn" class="btn btn-outline-primary me-3">

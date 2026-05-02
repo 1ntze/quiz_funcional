@@ -58,6 +58,33 @@ $result = $conn->query($sql);
         object-fit: cover;
         border: 2px solid white;
     }
+
+
+.logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.logo-img {
+    width: 500px;
+    display: block;
+    
+    animation: flutuar 3s ease-in-out infinite;
+
+    /* luz mais suave */
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4))
+            drop-shadow(0 0 20px rgba(255, 215, 0, 0.25))
+            drop-shadow(0 0 30px rgba(255, 215, 0, 0.15));
+}
+
+/* animação */
+@keyframes flutuar {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
 </style>
 <body class="dark-mode">
 
@@ -77,27 +104,29 @@ $result = $conn->query($sql);
 
         <div class="collapse navbar-collapse" id="menu">
 
-            <!-- LINKS -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="inicio.php">Início</a>
-                </li>
+           <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="inicio.php">Início</a>
+    </li>
 
-                  <?php if (isset($_SESSION['nome'])): ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Jogos</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
-                        </li>
-                    <?php endif; ?>
+    <?php if (isset($_SESSION['nome'])): ?>
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">Jogos</a>
+        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="rankingpage.php">Ranking</a>
-                </li>
-            </ul>
+        <li class="nav-item">
+            <a class="nav-link" href="dicas.php">Dicas do Edu</a>
+        </li>
+    <?php else: ?>
+        <li class="nav-item">
+            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
+        </li>
+    <?php endif; ?>
 
+    <li class="nav-item">
+        <a class="nav-link active" href="rankingpage.php">Ranking</a>
+    </li>
+</ul>
             <!-- DARK MODE -->
             <button onclick="toggleDark(event)" id="themeBtn" class="btn btn-outline-primary me-3">
                 <i class="bi bi-moon"></i>
@@ -180,6 +209,10 @@ $result = $conn->query($sql);
         </div>
     </div>
 </section>
+
+<div class="logo-wrap">
+    <img src="mimi.png" alt="" class="logo-img">
+</div>
 
 <!-- FOOTER -->
 <footer class="footer-insane position-relative overflow-hidden mt-5">

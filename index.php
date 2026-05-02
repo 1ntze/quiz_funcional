@@ -632,24 +632,30 @@ body.dark-mode .ranking th{
 
         <div class="collapse navbar-collapse" id="menu">
 
-            <!-- LINKS -->
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="inicio.php">Início</a>
-                </li>
+    <li class="nav-item">
+        <a class="nav-link" href="inicio.php">Início</a>
+    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="missoes_semlogin.php">Jogos</a>
-                </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="dicas.php">Dicas do Edu</a>
-                </li>
-            </ul>
-                <li class="nav-item">
-                    <a class="nav-link" href="rankingpage.php">Ranking</a>
-                </li>
-            </ul>
+    <?php if (isset($_SESSION['nome'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php">Jogos</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="missoes_semlogin.php">Jogos</a>
+                        </li>
+                    <?php endif; ?>
 
+ <li class="nav-item">
+        <a class="nav-link" href="dicas.php">Dicas do Edu</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="rankingpage.php">Ranking</a>
+    </li>
+
+    
+</ul>
             <!-- DARK MODE -->
             <button onclick="toggleDark(event)" id="themeBtn" class="btn btn-outline-primary me-3">
                 <i class="bi bi-moon"></i>
@@ -711,8 +717,8 @@ body.dark-mode .ranking th{
                 ✔ <span>Verdadeiro ou Falso</span>
             </a>
 
-            <a href="dicas.php" class="game-btn golpe">
-                🔎 <span>Dicas do Edu</span>
+            <a href="https://forms.office.com/r/jR5vr9Jbtg" class="game-btn golpe">
+                🔎 <span>Faça sua sugestão!</span>
             </a>
 
         </div>
