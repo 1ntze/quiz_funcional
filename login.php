@@ -81,12 +81,12 @@ if($result->num_rows > 0){
                 <p style="color: red; font-weight: 600; font-size: small;"><?php if (isset($erro)) echo $erro; ?></p>
             </div>
 
-            <!-- ESQUECI SENHA -->
-            <a href="/Cadastro/Cadastro.html" style="color:#2d959c; font-size:11px; text-transform:uppercase; text-align:center;">
-                <br>
-                <b>ESQUECI MINHA SENHA</b>
-            </a>
-  <br>
+          <!-- ESQUECI SENHA -->
+<a href="forgetpassword.php" style="color:#2d959c; font-size:11px; text-transform:uppercase; text-align:center;">
+    <br>
+    <b>ESQUECI MINHA SENHA</b>
+</a>
+<br>
             <!-- BOTÃO ENTRAR -->
             <button type="submit" class="cta">
                 <span>ENTRAR</span>

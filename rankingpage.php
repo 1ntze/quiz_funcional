@@ -84,7 +84,7 @@ $result = $conn->query($sql);
     0%   { transform: translateY(0px); }
     50%  { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
-}
+}''
 </style>
 <body class="dark-mode">
 

@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro = "Preencha todos os campos.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erro = "Digite um e-mail válido.";
+    } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/', $senha)) {
+        $erro = "A senha deve ter no mínimo 8 caracteres, incluindo maiúscula, minúscula, número e símbolo.";
     } elseif ($senha != $confirmar_senha) {
         $erro = "As senhas não coincidem.";
     } else {
@@ -59,8 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/cadastro/style.css">
-    <link rel="icon" type="image/png" href="img/Icon.png">
-
+   
+   <!-- Icons -->
+    <link rel="icon" type="image/png" href="icon.png">
     <style>
         body {
             background-image: url("img/cadastro/img/Background - Cadastro.png");
