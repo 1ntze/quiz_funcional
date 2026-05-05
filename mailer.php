@@ -16,8 +16,8 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "cyberedu.noreply@gmail.com";
-$mail->Password = "nind ogbu vhvo eymu";
+$mail->Username = "emailcyberedu";
+$mail->Password = "senhaapp";
 
 $mail->isHTML(true);
 $mail->CharSet = "UTF-8";
