@@ -16,8 +16,8 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "email cyberedu";
-$mail->Password = "senha app (google)";
+$mail->Username = $_ENV['MAIL_USER'];
+$mail->Password =  $_ENV['MAIL_PASS'];
 
 $mail->isHTML(true);
 $mail->CharSet = "UTF-8";
