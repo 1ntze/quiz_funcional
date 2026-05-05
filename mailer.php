@@ -16,12 +16,12 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "emailcyberedu";
-$mail->Password = "senhaapp";
+$mail->Username = "email cyberedu";
+$mail->Password = "senha app (google)";
 
 $mail->isHTML(true);
 $mail->CharSet = "UTF-8";
 
-$mail->setFrom("cyberedu.noreply@gmail.com", "CyberEdu®");
+$mail->setFrom("email cyberedu", "CyberEdu®");
 
 return $mail;
